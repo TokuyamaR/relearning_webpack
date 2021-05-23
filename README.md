@@ -1,17 +1,11 @@
-# About this repository
+# Overview
 
 To deepen my understanding about webpack.
 Webpack version 5 is used.
 
 ## Notes
 
-The editor uses VS code.
-The folloing settings are made individually.
-
-```
-### Open Settings
-command + ,
-```
+I uses VS code as editor, and set each of the following items to True.
 
 - Trim trailing whitespace
 
@@ -23,4 +17,9 @@ files.trimTrailingWhitespace
 
 ```
 files.insertFinalNewline
+```
+
+```
+### Open Settings
+command + ,
 ```
