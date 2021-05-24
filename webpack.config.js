@@ -1,12 +1,13 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/javascripts/main.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "main.js",
+    filename: "./javascripts/main.js",
   },
   module: {
     rules: [
@@ -28,7 +29,10 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({ template: "src/index.html" }), // templateにビルドされたJS, cssファイルが全て読み込まれる
+    new MiniCssExtractPlugin({
+      filename: "./stylesheets/main.css",
+    }),
+    new HtmlWebpackPlugin({ template: "src/templates/index.html" }), // templateにビルドされたJS, cssファイルが全て読み込まれる
+    new CleanWebpackPlugin(), // outputディレクトリ配下にて、自動生成されるファイル以外の不要ファイルを削除する
   ],
 };
