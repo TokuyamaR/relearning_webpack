@@ -26,6 +26,17 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg)/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              esModule: false,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
