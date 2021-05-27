@@ -33,6 +33,17 @@ module.exports = {
           filename: "images/[name][ext]",
         },
       },
+      {
+        test: /\.pug/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+          {
+            loader: "pug-html-loader",
+          },
+        ],
+      },
     ],
   },
   plugins: [
