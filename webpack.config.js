@@ -27,13 +27,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg)$/i,
+        test: /\.(png|jpg)/,
         use: [
           {
             loader: "file-loader",
             options: {
               esModule: false,
-              name: "images/sample_img.jpg",
+              name: "images/[name].[ext]",
             },
           },
         ],
