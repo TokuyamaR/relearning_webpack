@@ -62,6 +62,10 @@ module.exports = {
       template: "src/templates/access.pug",
       filename: "access.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/members/taro.pug",
+      filename: "members/taro.html",
+    }),
     new CleanWebpackPlugin(), // outputディレクトリ配下にて、自動生成されるファイル以外の不要ファイルを削除する
   ],
 };
