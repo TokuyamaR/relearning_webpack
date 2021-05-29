@@ -12,6 +12,20 @@ module.exports = {
   module: {
     rules: [
       {
+        // JavaScript
+        test: /\.js/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader", // JSをES5の文法にコンパイル
+            options: {
+              presets: ["@babel/preset-env"],
+            },
+          },
+        ],
+      },
+      {
+        // css
         test: /\.(css|sass|scss)/,
         use: [
           // moduleは "下" から順に適用される
@@ -30,6 +44,7 @@ module.exports = {
         ],
       },
       {
+        // image
         test: /\.(png|jpe?g)$/,
         type: "asset/resource",
         generator: {
@@ -37,6 +52,7 @@ module.exports = {
         },
       },
       {
+        // html
         test: /\.pug/,
         use: [
           {
