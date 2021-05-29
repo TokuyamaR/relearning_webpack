@@ -53,7 +53,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "./stylesheets/main.css", // jsにimportされたcssをcssファイルを切り離して自動生成する
     }),
-    new HtmlWebpackPlugin({ template: "src/templates/index.pug" }), // templateにビルドされたJS, cssファイルが全て読み込まれる
+    // templateにビルドされたJS, cssファイルが全て読み込まれる
+    new HtmlWebpackPlugin({
+      template: "src/templates/index.pug",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/access.pug",
+      filename: "access.html",
+    }),
     new CleanWebpackPlugin(), // outputディレクトリ配下にて、自動生成されるファイル以外の不要ファイルを削除する
   ],
 };
