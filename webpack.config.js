@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/,
+        test: /\.(css|sass|scss)/,
         use: [
           // moduleは "下" から順に適用される
           // {
@@ -23,6 +23,9 @@ module.exports = {
           },
           {
             loader: "css-loader", //jsファイルにcssファイルを読み込ませるためのモジュール
+          },
+          {
+            loader: "sass-loader", //sassで記載されたファイルを読み込ませるためのモジュール
           },
         ],
       },
