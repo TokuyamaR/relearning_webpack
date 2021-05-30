@@ -19,7 +19,15 @@ module.exports = {
           {
             loader: "babel-loader", // JSをES5の文法にコンパイル
             options: {
-              presets: ["@babel/preset-env"],
+              // preset: pluginsが束になったもの
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    targets: "> 0.25%, not dead", // 対象ブラウザを設定
+                  },
+                ],
+              ],
             },
           },
         ],
