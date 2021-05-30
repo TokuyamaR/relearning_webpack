@@ -15,6 +15,16 @@ module.exports = {
   module: {
     rules: [
       {
+        // typescript
+        test: /\.(ts|tsx)/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "ts-loader",
+          },
+        ],
+      },
+      {
         // Vue
         test: /\.vue/,
         exclude: /node_modules/,
