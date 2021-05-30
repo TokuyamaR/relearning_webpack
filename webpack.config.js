@@ -15,13 +15,13 @@ module.exports = {
     rules: [
       {
         // JavaScript
-        test: /\.js/,
+        test: /\.(js|jsx)/,
         exclude: /node_modules/,
         use: [
           {
             loader: "babel-loader", // JSをES5の文法にコンパイル
             options: {
-              // preset: pluginsが束になったもの
+              // presets: pluginsが束になったもの
               presets: [
                 [
                   "@babel/preset-env",
@@ -29,6 +29,7 @@ module.exports = {
                     targets: "> 0.25%, not dead", // 対象ブラウザを設定
                   },
                 ],
+                "@babel/preset-react",
               ],
             },
           },
