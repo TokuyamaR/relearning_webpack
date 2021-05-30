@@ -28,6 +28,7 @@ module.exports = {
                   {
                     targets: "> 0.25%, not dead", // 対象ブラウザを設定
                   },
+                  "@babel/preset-react",
                 ],
               ],
             },
