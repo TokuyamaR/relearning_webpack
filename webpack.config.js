@@ -63,6 +63,11 @@ module.exports = {
         generator: {
           filename: "images/[name][ext]",
         },
+        use: [
+          {
+            loader: "image-webpack-loader",
+          },
+        ],
       },
       {
         // html
