@@ -14,3 +14,7 @@ body {
   body .title-sm {
     font-size: 12px; }
 
+p {
+  color: lightgreen;
+}
+
