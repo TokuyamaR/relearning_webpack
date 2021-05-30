@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+  mode: "development", // ここを指定しておくと、CLIにてmodeのオプション指定が不要となる
   devtool: "source-map",
   entry: "./src/javascripts/main.js",
   output: {
