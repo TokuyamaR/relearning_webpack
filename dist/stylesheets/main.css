@@ -1,0 +1,20 @@
+.footer {
+  background-color: #cecece; }
+
+body {
+  color: lightgreen; }
+  body .title, body .title-lg, body .title-md, body .title-sm {
+    margin-right: 16px;
+    color: #eee;
+    font-size: 14px; }
+  body .title-lg {
+    font-size: 18px; }
+  body .title-md {
+    font-size: 16px; }
+  body .title-sm {
+    font-size: 12px; }
+
+p {
+  color: lightgreen;
+}
+
