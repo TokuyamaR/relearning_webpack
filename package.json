@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack --mode=development && npx webpack serve --mode=development"
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode=development",
+    "build:watch": "webpack --watch --mode=development",
+    "start:prd": "webpack serve --mode=production",
+    "build:prd": "webpack --mode=production"
   },
   "author": "Tokuyama",
   "license": "UNLICENSED",
