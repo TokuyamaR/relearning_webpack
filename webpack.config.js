@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  devtook: "source-map",
+  devtool: "source-map",
   entry: "./src/javascripts/main.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
@@ -46,6 +46,9 @@ module.exports = {
           },
           {
             loader: "css-loader", //jsファイルにcssファイルを読み込ませるためのモジュール
+            options: {
+              sourceMap: false,
+            },
           },
           {
             loader: "sass-loader", //sassで記載されたファイルを読み込ませるためのモジュール
