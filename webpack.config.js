@@ -2,7 +2,6 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   mode: "development", // ここを指定しておくと、CLIにてmodeのオプション指定が不要となる
@@ -21,16 +20,6 @@ module.exports = {
         use: [
           {
             loader: "ts-loader",
-          },
-        ],
-      },
-      {
-        // Vue
-        test: /\.vue/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "vue-loader",
           },
         ],
       },
@@ -109,7 +98,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: "./stylesheets/main.css", // jsにimportされたcssをcssファイルを切り離して自動生成する
     }),
