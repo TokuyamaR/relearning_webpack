@@ -4,7 +4,7 @@ import * as React from "react";
 import Alert from "./Alert.tsx";
 const App = (props) => {
   return (
-    <div style={{ backgroundColor: "blue", color: "white", padding: "1em" }}>
+    <div>
       <Alert message="This is a tsx component!" />
     </div>
   );
