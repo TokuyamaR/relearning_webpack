@@ -9,7 +9,7 @@ module.exports = {
   entry: "./src/javascripts/main.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "./javascripts/main.js",
+    filename: "./javascripts/main-[contenthash].js",
   },
   module: {
     rules: [
@@ -72,7 +72,7 @@ module.exports = {
         test: /\.(png|jpe?g)$/,
         type: "asset/resource",
         generator: {
-          filename: "images/[name][ext]",
+          filename: "images/[name]-[contenthash][ext]",
           publicPath: "/",
         },
         use: [
@@ -100,7 +100,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "./stylesheets/main.css", // jsにimportされたcssをcssファイルを切り離して自動生成する
+      filename: "./stylesheets/main-[contenthash].css", // jsにimportされたcssをcssファイルを切り離して自動生成する
     }),
     // templateにビルドされたJS, cssファイルが全て読み込まれる
     new HtmlWebpackPlugin({
