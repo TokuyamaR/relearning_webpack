@@ -73,6 +73,7 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "images/[name][ext]",
+          publicPath: "/",
         },
         use: [
           {
